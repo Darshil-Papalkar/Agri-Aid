@@ -1,0 +1,108 @@
+.bg-img{
+    background-image: url("/images/climate_img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+    min-height: 78vh;
+}
+
+.weather-page{
+    overflow: hidden;
+}
+
+.form-input-fields{
+    display: flex;
+    padding: 3% 0 2%;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-groups{
+    margin: 0 10px;
+}
+
+.input-btn{
+    margin: auto;
+}
+
+.head-1{
+    height: 100px;
+}
+
+.hidden-text-content{
+    visibility: hidden;
+}
+
+.country-name{
+    margin: 0;
+    position: relative;
+    line-height: 200px;
+    background-color: rgba(255, 255, 255, 0.493);
+    border-radius: 10px;
+    padding: 10px 5px;
+
+}
+
+.weather-logo{
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.493);
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
+.city-name{
+    margin: 0;
+    position: relative;
+    line-height: 200px;
+    background-color: rgba(255, 255, 255, 0.493);
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
+.head-text{
+    text-align: center;
+    line-height: 100px;
+    font-family: 'Merienda', cursive;
+}
+
+.city-data{
+    /* width: 80%; */
+    margin: 15px auto;
+}
+
+.place-detail{
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0 30px;
+}
+
+.text-data{
+    width: max-content;
+    margin: auto;
+}
+
+.text{
+    font-family: 'Libre Baskerville', serif;
+}
+
+.weather-image{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.city-details{
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* 
+@media screen and (min-width: 1060px) {
+    .text{
+        padding-left: 6rem;
+    }
+} */

@@ -1,0 +1,234 @@
+<%- include("partials/head.ejs") -%> 
+
+    <link rel="stylesheet" href="/css/market.css">
+    <title>Market Price</title>
+
+</head>
+
+<%- include("partials/header.ejs"); -%> 
+
+<style>
+    @media (min-width: 768px){
+        .my-md-5{
+            margin-top: 2px !important;
+        }
+
+        .border-top {
+            border-top: 2px solid #a7a9aa!important;
+        }
+    }
+</style>
+
+<section class="market-body">
+
+    <div class="market-price-table">
+        
+        <table class="table table-dark table-hover">
+            <caption><h5>Kharif Crops</h5></caption>
+        </table>
+
+        <table class="table table-success table-hover table-striped table-bordered border-secondary">
+
+            <thead>
+                <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">Crop Name</th>
+                <th scope="col">Min Price(in &#8377)</th>
+                <th scope="col">Max Price(in &#8377)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Paddy</td>
+                    <td>1800</td>
+                    <td>1950</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jowar</td>
+                    <td>2600</td>
+                    <td>2800</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Bajra</td>
+                    <td>2100</td>
+                    <td>2300</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Maize</td>
+                    <td>1800</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Ragi</td>
+                    <td>3200</td>
+                    <td>3400</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Tur (Arhar)</td>
+                    <td>6000</td>
+                    <td>6100</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>Moong</td>
+                    <td>7100</td>
+                    <td>7300</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>Urad</td>
+                    <td>6000</td>
+                    <td>6100</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>Cotton</td>
+                    <td>5500</td>
+                    <td>5600</td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>Ground-Nut</td>
+                    <td>5200</td>
+                    <td>5400</td>
+                </tr>
+                <tr>
+                    <th scope="row">11</th>
+                    <td>Sunflower-seed</td>
+                    <td>5800</td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <td>Soyabean</td>
+                    <td>3800</td>
+                    <td>4000</td>
+                </tr>
+                <tr>
+                    <th scope="row">13</th>
+                    <td>Sesamum</td>
+                    <td>6800</td>
+                    <td>6900</td>
+                </tr>
+                <tr>
+                    <th scope="row">14</th>
+                    <td>Nigerseed</td>
+                    <td>6600</td>
+                    <td>6800</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <table class="table table-dark table-hover">
+            <caption><h5>Rabi Crops</h5></caption>
+        </table>
+
+        <table class="table table-success table-hover table-striped table-bordered border-secondary">
+
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No.</th>
+                    <th scope="col">Crop Name</th>
+                    <th scope="col">Min Price(in &#8377)</th>
+                    <th scope="col">Max Price(in &#8377)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Wheat</td>
+                    <td>1900</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>barley</td>
+                    <td>1600</td>
+                    <td>1700</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>gram</td>
+                    <td>5100</td>
+                    <td>5200</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>masur (lentil)</td>
+                    <td>5100</td>
+                    <td>5300</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>rapeseed & mustard</td>
+                    <td>4600</td>
+                    <td>4800</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>safflower</td>
+                    <td>5300</td>
+                    <td>5400</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>toria(in 2020)</td>
+                    <td>4400</td>
+                    <td>4500</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <table class="table table-dark table-hover">
+            <caption><h5>Other Crops</h5></caption>
+        </table>
+
+        <table class="table table-success table-hover table-striped table-bordered border-secondary">
+
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No.</th>
+                    <th scope="col">Crop Name</th>
+                    <th scope="col">Min Price(in &#8377)</th>
+                    <th scope="col">Max Price(in &#8377)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Copra</td>
+                    <td>9900</td>
+                    <td>10000</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>coconut</td>
+                    <td>2700</td>
+                    <td>2800</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>jute</td>
+                    <td>4200</td>
+                    <td>4400</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<%- include("partials/footer.ejs"); -%> 

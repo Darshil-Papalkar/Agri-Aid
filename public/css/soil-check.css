@@ -1,0 +1,97 @@
+.soil-check-section{
+    width: 80%;
+    margin: 30px auto 10px;
+}
+
+.soil-check-section-heading{
+    text-align: center;
+    padding: 5px 0 30px;
+    font-family: 'Merienda', cursive;
+}
+
+.section-head-image{
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    border: 2px double grey;
+    overflow: hidden;
+}
+
+.section-head-image img{
+    transition: transform 0.5s;
+}
+
+.section-head-image img:hover{
+    transform: scale(1.2);
+}
+
+
+.soil-content{
+    margin: 10% auto 0;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.soil-image{
+    width: 90%;
+    margin: auto;
+    transition: transform 0.5s;
+}
+
+.soil-image:hover{
+    transform: scale(1.1);
+}
+
+.soil-image img{
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px grey;
+}
+
+.primary-list{
+    width: max-content;
+    margin: auto;
+}
+
+.primary-nutrients-list{
+    margin: auto;
+}
+
+.ul-header{
+    text-align: center;
+}
+
+.soil-text, .ul-header, .primary-list{
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+.hidden-visi{
+    visibility: hidden;
+}
+
+.links-card{
+    width: max-content;
+    margin: 5% auto 0;
+}
+
+.table{
+    margin-bottom: 0;
+    border-spacing: 5px;
+}
+
+table, td{
+    border: 1px solid black;
+    border-collapse: separate;
+}
+
+td{
+    padding: 15px 50px;
+}
+
+td a{
+    text-decoration: none;
+}
+
+.card-header{
+    background-color: #212529;
+    color: whitesmoke;
+}

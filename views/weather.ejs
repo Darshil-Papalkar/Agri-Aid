@@ -1,0 +1,25 @@
+<%- include("partials/head.ejs") -%> 
+
+    <link rel="stylesheet" href="/css/weather.css">
+    <title>Weather Update</title>
+</head>
+
+<%- include("partials/header.ejs"); -%> 
+
+<div class="bg-img">
+    <section class="form-section">
+        <form method="POST">
+            <div class="form-input-fields">
+                <div class="input-groups field-input">
+                    <input type="text" class="form-control form-input-field" maxlength="40" name="city" placeholder="Enter City Name">
+                </div>
+                <div class="input-groups">
+                    <button class="btn btn-primary input-btn" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+
+
+<%- include("partials/footer.ejs"); -%> 
