@@ -1,7 +1,7 @@
 const express = require("express");
 const ejs = require("ejs");
 const lodash = require("lodash");
-const { round } = require("lodash");
+const { round, toInteger } = require("lodash");
 const https = require("https");
 const { type } = require("os");
 
@@ -41,6 +41,24 @@ app.get("/market-price", function(req, res){
 
 app.get("/dealer", function(req, res){
     res.render("dealer");
+});
+
+app.get("/revenue-predictor", function(req, res){
+    if(req.query.production){
+        const prod = toInteger(req.query.production);
+        const selling_price = toInteger(req.query.selling_price);
+        const cost_price = toInteger(req.query.cost_price);
+        const add_price = toInteger(req.query.additional_price);
+        const val = (prod * selling_price) - cost_price - add_price;
+        res.render("revenue-predictor", {
+            data: val
+        });
+    }
+    else{
+        res.render("revenue-predictor", {
+            data: 0
+        });
+    }
 });
 
 app.get("/news", function(req, res){

@@ -1,0 +1,64 @@
+.predictor-section{
+    padding: 5% 20%;
+    background-image: url("/images/crop_sell_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.form-container{
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 15px;
+    padding: 30px 0;
+    box-shadow: 0px 0px 20px 5px black;
+}
+
+.prediction-heading{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5%;
+}
+
+.prediction-title{
+    font-family: 'Merienda', cursive;
+    text-align: center;
+}
+
+.predictor-form{
+    width: 70%;
+    margin: auto;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+sup{
+    color: red;
+    font-size: 1.1rem;
+}
+
+.btn{
+    font-size: 1.2rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.output-data{
+    display: flex;
+    justify-content: center;
+}
+
+.output-data span{
+    font-family: 'Vidaloka', serif;
+}
+
+.more-padding{
+    padding: 0 20px;
+}
+
+.button-style{
+    border: 5px double chartreuse;
+    width: 100%;
+}

@@ -1,14 +1,19 @@
 .dealer-section{
-    margin: 5% auto 0;
+    margin: auto;
     overflow: hidden;
+    background-image: url("/images/dealer.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .section-heading{
     text-transform: uppercase;
     text-align: center;
-    padding: 0 0 40px;
+    padding: 50px 0 40px;
     font-family: 'Merienda', cursive;
-
+    color: blanchedalmond;
 }
 
 .dealer-body{

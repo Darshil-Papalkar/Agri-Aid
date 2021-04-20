@@ -1,0 +1,61 @@
+<%- include("partials/head.ejs") -%> 
+
+    <link rel="stylesheet" href="/css/revenue-predictor.css">
+    <title>Market Price</title>
+
+</head>
+
+<%- include("partials/header.ejs"); -%> 
+
+<section class="predictor-section">
+    <div class="form-container">
+        <div class="prediction-heading">
+            <h1 class="prediction-title">
+                Revenue Predictor
+            </h1>
+        </div>
+        <div class="predictor-form">
+            <form action="/revenue-predictor" method="GET">
+                <div class="row g-2">
+                    <div class="col-md-6 more-padding">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" name="production" id="floatingInputGrid" placeholder="Eg: 1,000" required autocomplete="off">
+                            <label for="floatingInputGrid">Crop Produced(in Kgs) <sup>*</sup></label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 more-padding">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" name="selling_price" id="floatingInputGrid" placeholder="Eg: &#8377;150" required autocomplete="off">
+                            <label for="floatingInputGrid">Selling Price(per Kg) <sup>*</sup></label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 more-padding">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" name="cost_price" id="floatingInputGrid" placeholder="Eg: &#8377;2,000" required autocomplete="off">
+                            <label for="floatingInputGrid"> Cultivation Costing(in Total) <sup>*</sup> </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 more-padding">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" name="additional_cost" id="floatingInputGrid" placeholder="Eg: &#8377;800" required autocomplete="off">
+                            <label for="floatingInputGrid">Additional Cost <sup>*</sup></label>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" class="btn btn-warning mb-3 button-style">Submit</button>
+                    </div>
+                </div>
+                <div class="output-data">
+                    <% if (data === 0) { %>
+                        
+                    <% } else { %>   
+                        <h3><span>Total Revenue: &#8377; <%= data %> </span></h3>
+                    <% } %> 
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs"); -%> 

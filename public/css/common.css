@@ -10,6 +10,17 @@
     text-align: center;
 }
 
+.navbar{
+    background-attachment: fixed;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}  
+
 .navbar .container-fluid .navbar-brand{
     padding: 5px 10px;
     margin-left: 2%;
