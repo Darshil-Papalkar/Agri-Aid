@@ -44,15 +44,6 @@ app.get("/dealer", function(req, res){
 });
 
 app.get("/news", function(req, res){
-    const newsapiKey = "bee2f1da8603454a9ff766080679ed05";
-    const newsUrl = "https://newsapi.org/v2/everything?q=agriculture&sortBy=popularity&apiKey="+newsapiKey;
-    https.get(newsUrl, function(response){
-        response.on("data", (raw_news) =>{
-            const news = JSON.parse(raw_news)
-            console.log(news);
-            
-        });
-    });
     res.render("news");
 });
 

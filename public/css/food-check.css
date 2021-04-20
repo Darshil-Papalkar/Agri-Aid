@@ -1,0 +1,87 @@
+.food-check-section{
+    width: 80%;
+    margin: 30px auto 10px;
+}
+
+.food-check-section-heading{
+    text-align: center;
+    padding: 5px 0 30px;
+    font-family: 'Merienda', cursive;
+}
+
+.section-head-image{
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    border: 2px double grey;
+    overflow: hidden;
+}
+
+.section-head-image img{
+    transition: transform 0.5s;
+}
+
+.section-head-image img:hover{
+    transform: scale(1.2);
+}
+
+
+.food-content{
+    margin: 10% auto 0;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.centering-row{
+    align-items: center;
+    justify-content: center;
+}
+
+.food-image{
+    width: 90%;
+    margin: auto;
+    transition: transform 0.5s;
+}
+
+.food-image:hover{
+    transform: scale(1.1);
+}
+
+.food-image img{
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px grey;
+}
+
+
+.food-para, .ul-header, .primary-list{
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+
+.links-card{
+    width: max-content;
+    margin: 5% auto 0;
+}
+
+.table{
+    margin-bottom: 0;
+    border-spacing: 5px;
+}
+
+table, td{
+    border: 1px solid black;
+    border-collapse: separate;
+}
+
+td{
+    padding: 15px 50px;
+}
+
+td a{
+    text-decoration: none;
+}
+
+.card-header{
+    background-color: #212529;
+    color: whitesmoke;
+}
