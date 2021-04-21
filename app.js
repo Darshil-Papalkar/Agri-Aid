@@ -43,6 +43,25 @@ app.get("/dealer", function(req, res){
     res.render("dealer");
 });
 
+app.get("/form", function(req, res){
+    res.render("form");
+});
+
+app.post("/form-send", function(req, res){
+    const f_name = req.body.f_name;
+    const l_name = req.body.l_name;
+    const email = req.body.email;
+    const phone = req.body.phone_number;
+    const address_1 = req.body.address_1;
+    const address_2 = req.body.address_2;
+    const person_name = req.body.service;
+    const city = req.body.city;
+    const state = req.body.state;
+    const zip = req.body.zip_code;
+
+    res.redirect("/dealer");
+});
+
 app.get("/revenue-predictor", function(req, res){
     if(req.query.production){
         const prod = toInteger(req.query.production);
@@ -63,6 +82,10 @@ app.get("/revenue-predictor", function(req, res){
 
 app.get("/news", function(req, res){
     res.render("news");
+});
+
+app.get("/support", function(req, res){
+    res.render("support");
 });
 
 app.get("/weather", function(req, res){

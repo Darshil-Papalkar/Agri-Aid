@@ -19,10 +19,11 @@
 
 .section-head-image img{
     transition: transform 0.5s;
+    height: 50vh;
 }
 
 .section-head-image img:hover{
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 
 

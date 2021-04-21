@@ -1,0 +1,116 @@
+.support-section {
+    padding: 5% 0;
+}
+
+.container {
+    perspective: 800px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.card {
+    margin: auto;
+    width: 700px;
+    height: 400px;
+    background: rgb(20, 20, 20);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform-style: preserve-3d;
+    transition: 0.6s;
+}
+
+.side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotate(0deg) translateZ(1px);
+}
+
+.back-data{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .card:hover,
+.back {
+    transform: rotateY(-180deg) translateZ(1px);
+}
+
+.front {
+    line-height: 390px;
+    text-align: center;
+}
+
+.logo {
+    outline: 1px solid #19F6E8;
+    display: inline-block;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 8px;
+}
+
+.back {
+    background: #15CCC0;
+    position: relative;
+}
+
+.name {
+    color: #3B3B3B;
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0.8em 0;
+}
+
+.info {
+    position: relative;
+    color: #3b3b3b;
+}
+
+.property {
+    color: #fff;
+}
+
+@media (max-width:700px) {
+    .card {
+        transform: scale(.5);
+    }
+
+    .container .card:hover {
+        transform: scale(.5) rotateY(-180deg) translateZ(1px);
+    }
+}
+
+
+.youtube-help{
+    width: 60%;
+    margin: 5% auto 0;
+}
+
+.youtube-vid-container{
+    width: max-content;
+    margin: auto;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+iframe{
+    border-radius: 8px;
+}
+
+.youtube-block-heading{
+    text-align: center;
+    padding: 5px 0 30px;
+    font-family: 'Merienda', cursive;
+}

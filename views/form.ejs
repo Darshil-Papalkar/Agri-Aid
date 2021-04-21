@@ -1,0 +1,107 @@
+<%- include("partials/head.ejs") -%> 
+
+    <link rel="stylesheet" href="/css/form.css">
+    <title>Booking Form</title>
+
+</head>
+
+<%- include("partials/header.ejs"); -%> 
+
+<section class="form-section">
+    <div class="form-block">
+        <form class="row g-3" method="POST" action="/form-send">
+            <div class="col-md-6">
+                <label for="inputFName" class="form-label">First Name <sup>*</sup></label>
+                <input type="text" name="f_name" class="form-control" id="inputFName" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputLName" class="form-label">Last Name <sup>*</sup></label>
+                <input type="text" name="l_name" class="form-control" id="inputLName" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email <sup>*</sup></label>
+                <input type="email" name="email" class="form-control" id="inputEmail4" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPhone" class="form-label">Phone Number <sup>*</sup></label>
+                <input type="number" name="phone_number" class="form-control" id="inputPhone" required>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address <sup>*</sup></label>
+                <input type="text" name="address_1" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputAddress2" class="form-label">Address 2 (Optional)</label>
+                <input type="text" name="address_2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputService" class="form-label">Service Provider <sup>*</sup></label>
+                <select id="inputService" name="service" class="form-select" required>
+                    
+                    <option selected>Choose...</option>
+                    <option>Cintu Pandit</option>
+                    <option>Amit Agarwal</option>
+                    <option>Suresh Patel</option>
+                    <option>Rajesh Sharma</option>
+                    <option>Pintu Kumar</option>
+                    <option>Krishna Babu</option>
+
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="inputCity" class="form-label">City <sup>*</sup></label>
+                <input type="text" name="city" class="form-control" id="inputCity" required>
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State <sup>*</sup></label>
+                <select id="inputState" name="state" class="form-select" required>
+                    
+                    <option selected>Choose...</option>
+                    <option>Andhra pradesh</option>
+                    <option>Arunachal pradesh</option>
+                    <option>Assam</option>>
+                    <option>Bihar</option>
+                    <option>Chattisgarh</option>
+                    <option>Delhi</option>
+                    <option> Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal pradesh</option>
+                    <option>Jammu and kashmir</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Lakshadweep Islands</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Pondicherry</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>>
+                    <option>Tripura</option>
+                    <option>Uttar pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West bengal</option>
+
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="inputZip" class="form-label">Zip <sup>*</sup> </label>
+                <input type="number" name="zip_code" class="form-control" id="inputZip" required>
+            </div>
+            
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs"); -%> 

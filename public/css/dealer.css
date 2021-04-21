@@ -1,7 +1,7 @@
 .dealer-section{
     margin: auto;
     overflow: hidden;
-    background-image: url("/images/dealer.jpg");
+    background-image: url("/images/dealers.jpg");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -138,4 +138,8 @@
 }
 .card .details .center ul li a:hover {
     background: #ff3636;
+}
+
+.card-hover{
+    box-shadow: 0px 0px 20px 5px black;
 }

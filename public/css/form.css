@@ -1,0 +1,16 @@
+.form-block{
+    margin: 5% 15%;
+    box-shadow: 0px 0px 20px 5px black;
+    background-color: rgba(245, 245, 245, 0.226);
+    padding: 20px;
+    overflow: hidden;
+}
+
+option{
+    text-transform: capitalize;
+}
+
+sup{
+    color: red;
+    font-size: 1.1rem;
+}
