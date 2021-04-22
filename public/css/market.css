@@ -1,5 +1,10 @@
 .market-body{
     background-color: #ccffbd94;
+    background-image: url("/images/market-price-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .market-price-table{
@@ -12,10 +17,20 @@ caption{
     display: table-caption;
     text-align: center;
     font-family: 'Merienda', cursive;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+
+}
+
+.my-table{
+    backdrop-filter: blur(5px);
+    background-color: rgba(245, 245, 245, 0.651);
 }
 
 caption h5{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: darkgreen;
 }
 
 table{
