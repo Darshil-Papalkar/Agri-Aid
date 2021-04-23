@@ -5,6 +5,7 @@ const https = require("https");
 const alert = require("alert");
 const mongoose = require("mongoose");
 const { raw } = require("express");
+const { parseInt } = require("lodash");
 
 const app = express();
 
@@ -108,10 +109,10 @@ app.post("/form-send", function(req, res){
 
 app.get("/revenue-predictor", function(req, res){
     if(req.query.production){
-        const prod = toInteger(req.query.production);
-        const selling_price = toInteger(req.query.selling_price);
-        const cost_price = toInteger(req.query.cost_price);
-        const add_price = toInteger(req.query.additional_price);
+        const prod = parseInt(req.query.production);
+        const selling_price = parseInt(req.query.selling_price);
+        const cost_price = parseInt(req.query.cost_price);
+        const add_price = parseInt(req.query.additional_cost);
         const val = (prod * selling_price) - cost_price - add_price;
         res.render("revenue-predictor", {
             data: val

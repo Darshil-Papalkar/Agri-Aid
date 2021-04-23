@@ -12,7 +12,7 @@
 
 .card {
     margin: auto;
-    width: 700px;
+    width: 80%;
     height: 400px;
     background: rgb(20, 20, 20);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -43,7 +43,7 @@
 }
 
 .front {
-    line-height: 390px;
+    line-height: 430px;
     text-align: center;
 }
 
@@ -53,9 +53,9 @@
     padding: 15px 40px;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.4em;
+    font-size: 3rem;
     font-weight: normal;
-    line-height: 32px;
+    line-height: 3rem;
     letter-spacing: 8px;
 }
 
@@ -84,11 +84,17 @@ p {
 
 @media (max-width:700px) {
     .card {
-        transform: scale(.5);
+        transform: scale(.8);
+        width: 100%;
     }
 
     .container .card:hover {
-        transform: scale(.5) rotateY(-180deg) translateZ(1px);
+        transform: scale(.8) rotateY(-180deg) translateZ(1px);
+    }
+
+    .support-section .youtube-help{
+        width: 100%;
+        margin: auto;
     }
 }
 
@@ -96,6 +102,7 @@ p {
 .youtube-help{
     width: 60%;
     margin: 5% auto 0;
+    overflow: hidden;
 }
 
 .youtube-vid-container{

@@ -63,3 +63,19 @@ sup{
     border: 5px double chartreuse;
     width: 100%;
 }
+
+@media screen and (max-width: 900px) {
+    .form-floating>label{
+        font-size: 0.7rem;
+    }
+
+    .predictor-section{
+        padding: 5%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1110px) {
+    .predictor-section{
+        padding: 5% 10%;
+    }
+}
