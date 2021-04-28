@@ -10,7 +10,7 @@
     margin: 30px 100px;
 }
 
-.services-list{
+.services-list, .index-about, .index-who{
     width: 80%;
     margin: 50px auto;
 }
@@ -22,7 +22,7 @@
     border: 5px solid chartreuse;
 }
 
-.services-head{
+.services-head, .index-about-head, .index-who-head{
     text-align: center;
     font-size: 1.5rem;
     padding: 0 0 30px;
@@ -52,7 +52,7 @@
     /* font-family: 'Lobster', cursive; */
 }
 
-.card-text{
+.card-text, .index-about-content, .index-who-content{
     width: 70%;
     margin: auto;
     font-family: 'Libre Baskerville', serif;

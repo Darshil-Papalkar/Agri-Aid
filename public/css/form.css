@@ -10,7 +10,7 @@
 .form-block{
     margin: auto 15%;
     box-shadow: 0px 0px 20px 5px black;
-    background-color: rgba(245, 245, 245, 0.315);
+    background-color: rgba(0, 0, 0, 0.082);
     padding: 20px;
     overflow: hidden;
     backdrop-filter: blur(4px);

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const ejs = require("ejs");
 const lodash = require("lodash");
@@ -6,6 +7,7 @@ const alert = require("alert");
 const mongoose = require("mongoose");
 const { raw } = require("express");
 const { parseInt } = require("lodash");
+const jquery = require("jquery");
 
 const app = express();
 
@@ -14,7 +16,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 mongoose.set('useFindAndModify', false);
-mongoose.connect("mongodb://localhost:27017/farmAid", {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://" + process.env.DBUSERNAME + ":" + process.env.DBPASSWORD + "@cluster0.3ilza.mongodb.net/Users?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true });
 
 const userSchema = new mongoose.Schema({
     f_name : String,
@@ -30,19 +32,11 @@ const userSchema = new mongoose.Schema({
     booking_date : Date
 });
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("formList", userSchema);
 
 function toCelcius(temp){
     return String(Math.round(temp - 273.16));
 }
-
-cities = {  "Vadodara" : "vd", 
-            "Chennai" : "ch", 
-            "Mumbai" : "mu", 
-            "Delhi" : "de", 
-            "Nagpur" : "na",
-            "Shimla" : "sh"
-        };
 
 app.get("/", function(req, res){
     res.render("index");
@@ -143,18 +137,31 @@ app.post("/weather", function(req, res){
         res.redirect("weather");
     }
     else{
-        const query1 = lodash.capitalize(query);
-        if(!cities[query1]){
-            alert("Enter a Valid Indian City");
-            res.redirect("/weather");
-        }
-        else{
-            const apikey = "1698a076f54bd4a9cd70ad24c66c512c";
-            const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&appid="+apikey;
-            https.get(url, function(response){
-                response.on("data", (d) =>{
+        const apikey = process.env.API_KEY;
+        const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&appid="+apikey;
+        https.get(url, function(response){
+            response.on("data", (d) =>{
 
-                    const weatherData =JSON.parse(d);
+                const weatherData =JSON.parse(d);
+                if(weatherData.cod == "404"){
+                    alert("Enter a Valid City Name");
+                    res.render("weather_op", {
+                        coordinate_lat : 0,
+                        coordinate_lon : 0,
+                        temp : 0,
+                        img: 0,
+                        temp_cel : 0,
+                        pressure : 0,
+                        humidity : 0,
+                        cityname : 0,
+                        cityid : 0,
+                        countryName : 0,
+                        feel_like: 0,
+                        max_temp : 0,
+                        min_temp : 0
+                    });
+                }
+                else{
                     const temp = weatherData.main.temp;
                     const icon = weatherData.weather[0].icon;
                     const imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
@@ -185,9 +192,9 @@ app.post("/weather", function(req, res){
                         max_temp : max_temp,
                         min_temp : min_temp
                     });
-                });
+                }
             });
-        }
+        });
     }
 });
 
