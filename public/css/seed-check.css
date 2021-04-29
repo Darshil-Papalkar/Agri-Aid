@@ -26,6 +26,9 @@
     transform: scale(1.4);
 }
 
+.seed-para{
+    margin: 20px auto;
+}
 
 .seed-content{
     margin: 10% auto 0;

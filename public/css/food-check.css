@@ -43,6 +43,11 @@
     transition: transform 0.5s;
 }
 
+.primary-list{
+    width: max-content;
+    margin: auto;
+}
+
 .food-image:hover{
     transform: scale(1.1);
 }
@@ -52,12 +57,18 @@
     box-shadow: 10px 10px 20px grey;
 }
 
+.food-para{
+    padding-top: 40px;
+}
 
 .food-para, .ul-header, .primary-list{
     font-size: 1.3rem;
     line-height: 1.8rem;
 }
 
+.primary-nutrients-list{
+    margin: auto auto 40px;
+}
 
 .links-card{
     width: max-content;
@@ -85,4 +96,13 @@ td a{
 .card-header{
     background-color: #212529;
     color: whitesmoke;
+}
+
+.ul-header{
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.hidden-visi{
+    visibility: hidden;
 }

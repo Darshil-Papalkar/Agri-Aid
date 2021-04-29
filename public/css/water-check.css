@@ -26,6 +26,9 @@
     transform: scale(1.4);
 }
 
+.water-para{
+    margin: 20px auto;
+}
 
 .water-content{
     margin: 10% auto 0;

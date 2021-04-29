@@ -176,6 +176,8 @@ app.post("/weather", function(req, res){
                     const feels = weatherData.main.feels_like;
                     const max_temp = weatherData.main.temp_max;
                     const min_temp = weatherData.main.temp_min;
+                    const max_temp_cel = toCelcius(max_temp);
+                    const min_temp_cel = toCelcius(min_temp);
                     
                     res.render("weather_op", {
                         coordinate_lat : lat,
@@ -189,8 +191,8 @@ app.post("/weather", function(req, res){
                         cityid : cityid,
                         countryName : countryName,
                         feel_like: feels,
-                        max_temp : max_temp,
-                        min_temp : min_temp
+                        max_temp : max_temp_cel,
+                        min_temp : min_temp_cel
                     });
                 }
             });
