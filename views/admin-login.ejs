@@ -12,10 +12,34 @@
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@600&family=Lobster&family=Merienda&family=Permanent+Marker&family=Vidaloka&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/common.css">
         <link rel="shortcut icon" href="/images/AGRI AID (1).ico" type="image/x-icon">
-        <link rel="stylesheet" href="/css/preloader.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="/js/preloader.js"></script>
+        <link rel="stylesheet" href="/css/admin-login.css">
+        <title>Admin Login</title>
 
-        
-        
+    </head>
 
+    <body>
+        <section class="admin-login">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form method="POST" action="/admin-login">
+                <div class="user-box">
+                    <input type="text" name="usernm" required style="background-color: transparent;" autocomplete="off">
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="passwd" required>
+                    <label>Password</label>
+                </div>
+                <a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <button class="form-button" type="submit">Submit</button>
+                </a>
+                </form>
+            </div>
+            
+        </section>
+    </body>
+</html>

@@ -13,9 +13,13 @@ body {
   background-image: linear-gradient(45deg, rgba(0, 209, 87, 0.7) 0%, #9dc40e 100%);
 }
 
+.news-search{
+  width: 20%;
+  margin: auto;
+}
+
 .section-heading{
   text-align: center;
-  padding: 0 0 30px;
   font-size: 1.3rem;
   font-family: 'Merienda', cursive;
 }
@@ -38,7 +42,8 @@ a, a:hover {
   height: 500px;
   position: absolute;
   top: 30px;
-  background: #fff;
+  background: transparent;
+  visibility: hidden;
   border-radius: 10px;
   box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
   opacity: 0;
@@ -56,7 +61,6 @@ a, a:hover {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 60px;
 }
 @media screen and (max-width: 1300px) {
   .news-slider {
@@ -262,4 +266,50 @@ a, a:hover {
   border-radius: 10px;
   height: 100%;
   width: 100%;
+}
+
+.video-links{
+  width: 70%;
+  margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .video-links{
+    width: 100%;
+  }
+}
+
+.youtube-help{
+  width: 60%;
+  margin: 5% auto 0;
+  overflow: hidden;
+}
+
+.youtube-vid-container{
+  width: max-content;
+  margin: auto;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+iframe{
+  border-radius: 8px;
+}
+
+.youtube-block-heading{
+  text-align: center;
+  padding: 30px 0;
+  font-family: 'Merienda', cursive;
+}
+
+.section-seperate{
+  width: 40%;
+  margin: auto;
+}
+
+.video-links{
+  background-color: rgba(255, 255, 255);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  margin-top: 50px;
 }

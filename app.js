@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const { raw } = require("express");
 const { parseInt } = require("lodash");
 const jquery = require("jquery");
+const { env } = require("process");
 
 const app = express();
 
@@ -81,7 +82,6 @@ app.post("/form-send", function(req, res){
     const city = req.body.city;
     const state = req.body.state;
     const zip = req.body.zip_code;
-
     const newUser = new User({
         f_name : f_name,
         l_name : l_name,
@@ -123,9 +123,51 @@ app.get("/news", function(req, res){
     res.render("news");
 });
 
+app.post("/news", function(req, res){
+    const search_query = req.body.newsSearch;
+    const newsUrl = "https://news.google.com/search?q=";
+    res.redirect(newsUrl + search_query);
+});
+
 app.get("/support", function(req, res){
     res.render("support");
 });
+
+app.post("/support", function(req, res){
+    const search_query = req.body.videoSupport;
+    const videoUrl = "https://www.youtube.com/results?search_query=";
+    res.redirect(videoUrl + search_query);
+});
+
+app.get("/admin-login", function(req, res){
+    res.render("admin-login");
+});
+
+app.post("/admin-login", function(req, res){
+    const username = req.body.usernm;
+    const password = req.body.passwd;
+    if(username === process.env.DBUSERNAME && password === process.env.DBPASSWORD){
+        User
+        .find({}, function(err, result){
+            if(err){
+                console.log(err);
+                res.redirect("/admin-login");
+            }
+            else{
+                res.render("user-data", {
+                    data: result
+                });
+            }
+        })
+        .limit(5)
+        .sort({booking_date: -1});
+    } 
+    else{
+        alert("Invalid Username or Password");
+        res.redirect("/admin-login");
+    }
+});
+
 
 app.get("/weather", function(req, res){
     res.render("weather");
@@ -199,6 +241,7 @@ app.post("/weather", function(req, res){
         });
     }
 });
+
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Server started on port 3000");

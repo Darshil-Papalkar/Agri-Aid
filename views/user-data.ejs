@@ -1,0 +1,94 @@
+<%- include("partials/head.ejs") -%> 
+
+    <link rel="stylesheet" href="/css/user-data.css">
+    <title>User Data</title>
+
+</head>
+
+<%- include("partials/header.ejs"); -%> 
+
+<section class="user-data">
+
+    <div class="booking-heading">
+        <h1>Booking Details</h1>
+    </div>
+    
+    <% if (data !== null) { %>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+                <th scope="col">Requested For</th>
+                <th scope="col">City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+
+                <td><%= data[0].f_name %> </td>
+                <td><%= data[0].l_name %> </td>
+                <td><%= data[0].email %> </td>
+                <td><%= data[0].phone %> </td>
+                <td><%= data[0].address_1 %> </td>
+                <td><%= data[0].person_name %> </td>
+                <td><%= data[0].city %> </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                
+                <td><%= data[1].f_name %> </td>
+                <td><%= data[1].l_name %> </td>
+                <td><%= data[1].email %> </td>
+                <td><%= data[1].phone %> </td>
+                <td><%= data[1].address_1 %> </td>
+                <td><%= data[1].person_name %> </td>
+                <td><%= data[1].city %> </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                
+                <td><%= data[2].f_name %> </td>
+                <td><%= data[2].l_name %> </td>
+                <td><%= data[2].email %> </td>
+                <td><%= data[2].phone %> </td>
+                <td><%= data[2].address_1 %> </td>
+                <td><%= data[2].person_name %> </td>
+                <td><%= data[2].city %> </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                
+                <td><%= data[3].f_name %> </td>
+                <td><%= data[3].l_name %> </td>
+                <td><%= data[3].email %> </td>
+                <td><%= data[3].phone %> </td>
+                <td><%= data[3].address_1 %> </td>
+                <td><%= data[3].person_name %> </td>
+                <td><%= data[3].city %> </td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                
+                <td><%= data[4].f_name %> </td>
+                <td><%= data[4].l_name %> </td>
+                <td><%= data[4].email %> </td>
+                <td><%= data[4].phone %> </td>
+                <td><%= data[4].address_1 %> </td>
+                <td><%= data[4].person_name %> </td>
+                <td><%= data[4].city %> </td>
+              </tr>
+            </tbody>
+        </table>
+    <% } else { %>
+     
+    <% } %> 
+
+</section>
+
+<%- include("partials/footer.ejs"); -%> 
